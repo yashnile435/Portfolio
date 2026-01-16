@@ -3,65 +3,95 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
+    <title>Yash Nile | Developer & Designer</title>
+    <meta name="description" content="Portfolio of Yash Nile, a Web Developer & Designer creating modern, responsive, and functional digital experiences." />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
   </head>
   <body>
+    <div class="cursor-glow"></div>
     <header>
-      <div class="container">
-        <h1>Yash Nile</h1>
-        <p>Web Developer & Designer</p>
+      <div class="container header-container">
+        <a href="#" class="logo">Portfolio<span>.</span></a>
+        
+        <button class="menu-toggle" aria-label="Toggle navigation">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+
         <nav>
           <ul>
             <li><a href="#about">About</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#skills">Skills</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#contact" class="btn-nav">Let's Talk</a></li>
           </ul>
         </nav>
       </div>
     </header>
 
     <section id="hero" class="hero">
-      <div class="container">
-        <h2>Welcome to My Portfolio</h2>
-        <p>I create beautiful and functional websites</p>
-        <a href="#contact" class="btn">Get In Touch</a>
+      <div class="hero-bg">
+        <div class="gradient-circle circle-1"></div>
+        <div class="gradient-circle circle-2"></div>
+      </div>
+      <div class="container hero-content">
+        <span class="subtitle">Hello, I'm</span>
+        <h1>Yash Nile</h1>
+        <p class="role">Web Developer & Designer</p>
+        <p class="description">Crafting exceptional digital experiences with modern technologies and a splash of creativity.</p>
+        <div class="hero-btns">
+            <a href="#projects" class="btn primary">View Work</a>
+            <a href="#contact" class="btn secondary">Contact Me</a>
+        </div>
       </div>
     </section>
 
     <section id="about" class="about">
       <div class="container">
-        <h2>About Me</h2>
+        <div class="section-header">
+          <h2>About Me</h2>
+          <p class="section-subtitle">Who I am and what I do</p>
+        </div>
         <div class="about-content">
+          <div class="about-image-wrapper">
+             <div class="image-frame">
+                <img src="profile.png" alt="Yash Nile" loading="lazy" />
+             </div>
+          </div>
           <div class="about-text">
+            <h3>Turning complex problems into <span class="highlight">simple solutions</span>.</h3>
             <p>
               I'm Yash Nile, a passionate Web Developer dedicated to crafting
-              responsive, visually appealing, and user-friendly websites that
-              deliver seamless digital experiences. With hands-on experience
-              across a variety of modern technologies and frameworks, I
-              specialize in turning creative ideas into functional,
-              high-performing web solutions.
+              responsive, visually appealing, and user-friendly websites. 
+              With hands-on experience across modern technologies, I specialize in 
+              building functional, high-performing web solutions.
             </p>
             <p>
-              Currently, I’m pursuing my Post Graduation (Master of Computer
-              Application) from Ajinkya D. Y. Patil School of MCA, affiliated
-              with Savitribai Phule Pune University (SPPU) — where I continue to
-              expand my technical expertise and innovative approach to
-              development.
+              Currently pursuing a Master of Computer Applications (MCA) at 
+              Ajinkya D. Y. Patil School of MCA, I am constantly expanding my 
+              technical expertise.
             </p>
-            <p>
-              I enjoy solving problems and learning new technologies to improve
-              my skills and deliver better results.
-            </p>
-            <a href="Resume.pdf" class="btn" download>Download Resume</a>
-          </div>
-          <div class="about-image">
-            <img src="profile.png" alt="Yash Nile - Profile Photo" />
+            <div class="info-grid">
+               <div class="info-item">
+                 <span class="label">Location</span>
+                 <span class="value">Jalgaon, India</span>
+               </div>
+               <div class="info-item">
+                 <span class="label">Email</span>
+                 <span class="value">yashnile.435@gmail.com</span>
+               </div>
+            </div>
+            <a href="Resume.pdf" class="btn outline" download>
+              <i class="fas fa-download"></i> Download Resume
+            </a>
           </div>
         </div>
       </div>
@@ -69,88 +99,122 @@
 
     <section id="projects" class="projects">
       <div class="container">
-        <h2>My Projects</h2>
+        <div class="section-header">
+          <h2>Featured Projects</h2>
+          <p class="section-subtitle">A selection of my recent work</p>
+        </div>
         <div class="project-grid">
-          <div class="project-card">
-            <h3>Agentic AI Question-Answer Helper</h3>
-            <p>
-              An Agentic AI system using LangGraph, LangChain, and FastAPI that
-              intelligently routes user queries to either a specific search tool
-              for factual data or uses LLM's general knowledge for
-              conversational queries.
-            </p>
-            <div class="project-links">
-              <a
-                href="https://github.com/yashnile435/AI-Agent-Ques-and-Ans"
-                target="_blank"
-                >View Code <i class="fab fa-github"></i
-              ></a>
+          <!-- Project 1 -->
+          <article class="project-card">
+            <div class="card-content">
+                <div class="card-icon"><i class="fas fa-robot"></i></div>
+                <h3>AI Agent Assistant</h3>
+                <p>
+                  An intelligent agentic system using LangGraph and FastAPI that 
+                  smartly routes queries between specific tools and general LLM knowledge.
+                </p>
+                <div class="tags">
+                    <span>Python</span>
+                    <span>LangChain</span>
+                    <span>FastAPI</span>
+                </div>
+                <div class="links">
+                  <a href="https://github.com/yashnile435/AI-Agent-Ques-and-Ans" target="_blank" class="link-btn">
+                    Code <i class="fab fa-github"></i>
+                  </a>
+                </div>
             </div>
-          </div>
-          <div class="project-card">
-            <h3>SmartHire – Applicant Tracking System</h3>
-            <p>
-              A web-based ATS developed using Python (Flask) and SQLite that
-              automates job posting, candidate applications, and application
-              status tracking with role-based access for admins and candidates.
-            </p>
-            <div class="project-links">
-              <a
-                href="https://github.com/yashnile435/SmartHire_ATS"
-                target="_blank"
-                >View Code <i class="fab fa-github"></i
-              ></a>
+          </article>
+          
+          <!-- Project 2 -->
+          <article class="project-card">
+            <div class="card-content">
+                <div class="card-icon"><i class="fas fa-briefcase"></i></div>
+                <h3>SmartHire ATS</h3>
+                <p>
+                  A comprehensive Applicant Tracking System built with Flask and SQLite, 
+                  automating job postings and candidate management.
+                </p>
+                <div class="tags">
+                    <span>Flask</span>
+                    <span>SQLite</span>
+                    <span>Python</span>
+                </div>
+                <div class="links">
+                  <a href="https://github.com/yashnile435/SmartHire_ATS" target="_blank" class="link-btn">
+                    Code <i class="fab fa-github"></i>
+                  </a>
+                </div>
             </div>
-          </div>
-          <div class="project-card">
-            <h3>Bappa Travels Application</h3>
-            <p>
-              A comprehensive travel application designed to streamline travel
-              booking and management, providing users with an intuitive
-              interface for planning their journeys.
-            </p>
-            <div class="project-links">
-              <a
-                href="https://github.com/yashnile435/Bappa-Travels-Application"
-                target="_blank"
-                >View Code <i class="fab fa-github"></i
-              ></a>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="project-card">
+            <div class="card-content">
+                <div class="card-icon"><i class="fas fa-plane-departure"></i></div>
+                <h3>Bappa Travels</h3>
+                <p>
+                  A travel booking application offering an intuitive interface for 
+                  planning journeys and managing reservations.
+                </p>
+                <div class="tags">
+                    <span>Web</span>
+                    <span>UI/UX</span>
+                    <span>Management</span>
+                </div>
+                <div class="links">
+                  <a href="https://github.com/yashnile435/Bappa-Travels-Application" target="_blank" class="link-btn">
+                    Code <i class="fab fa-github"></i>
+                  </a>
+                </div>
             </div>
-          </div>
+          </article>
         </div>
       </div>
     </section>
 
     <section id="skills" class="skills">
       <div class="container">
-        <h2>Skills & Technologies</h2>
-        <div class="skills-grid">
+        <div class="section-header">
+          <h2>Technical Skills</h2>
+          <p class="section-subtitle">The tools I use to build</p>
+        </div>
+        <div class="skills-wrapper">
           <div class="skill-category">
-            <h3>Frontend</h3>
-            <ul>
-              <li>HTML5</li>
-              <li>CSS3</li>
-              <li>JavaScript</li>
-              <li>React.js</li>
-            </ul>
+            <div class="category-header">
+                <i class="fas fa-code"></i>
+                <h3>Frontend</h3>
+            </div>
+            <div class="skill-list">
+              <span>HTML5</span>
+              <span>CSS3/SCSS</span>
+              <span>JavaScript (ES6+)</span>
+              <span>React.js</span>
+            </div>
           </div>
           <div class="skill-category">
-            <h3>Backend</h3>
-            <ul>
-              <li>Firebase</li>
-              <li>Python</li>
-              <li>SQL</li>
-              <li>No-SQL</li>
-            </ul>
+            <div class="category-header">
+                <i class="fas fa-server"></i>
+                <h3>Backend</h3>
+            </div>
+            <div class="skill-list">
+              <span>Python</span>
+              <span>Firebase</span>
+              <span>SQL</span>
+              <span>No-SQL</span>
+            </div>
           </div>
           <div class="skill-category">
-            <h3>Tools</h3>
-            <ul>
-              <li>Git</li>
-              <li>GitHub</li>
-              <li>VS Code</li>
-              <li>Figma</li>
-            </ul>
+             <div class="category-header">
+                <i class="fas fa-tools"></i>
+                <h3>Tools</h3>
+            </div>
+            <div class="skill-list">
+              <span>Git & GitHub</span>
+              <span>VS Code</span>
+              <span>Figma</span>
+              <span>Command Line</span>
+            </div>
           </div>
         </div>
       </div>
@@ -158,52 +222,40 @@
 
     <section id="contact" class="contact">
       <div class="container">
-        <h2>Get In Touch</h2>
-        <div class="contact-content">
-          <div class="contact-info">
-            <div class="contact-item">
-              <i class="fas fa-envelope"></i>
-              <p>
-                Email:
-                <a href="mailto:yashnile.435@gmail.com"
-                  >yashnile.435@gmail.com</a
-                >
-              </p>
+        <div class="contact-wrapper">
+            <div class="contact-text">
+                <h2>Let's Work Together</h2>
+                <p>Have a project in mind or just want to say hi? I'd love to hear from you.</p>
+                
+                <div class="contact-details">
+                    <a href="mailto:yashnile.435@gmail.com" class="contact-detail-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>yashnile.435@gmail.com</span>
+                    </a>
+                    <a href="tel:+918408872170" class="contact-detail-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+91 8408872170</span>
+                    </a>
+                    <div class="contact-detail-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Jalgaon, Maharashtra, India</span>
+                    </div>
+                </div>
+
+                <div class="social-links">
+                  <a href="https://wa.me/918408872170" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                  <a href="https://www.instagram.com/yashnile435?igsh=MWdqdWhscmFibmdjdg==" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                  <a href="https://github.com/yashnile435" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                  <a href="https://www.linkedin.com/in/yash-nile-3a54ba286?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                </div>
             </div>
-            <div class="contact-item">
-              <i class="fas fa-phone"></i>
-              <p>Phone: <a href="tel:+918408872170">8408872170</a></p>
-            </div>
-            <div class="contact-item">
-              <i class="fas fa-map-marker-alt"></i>
-              <p>Location: Jalgaon, Maharashtra,India</p>
-            </div>
-            <div class="social-links">
-              <a href="https://wa.me/918408872170" target="_blank"
-                ><i class="fab fa-whatsapp"></i
-              ></a>
-              <a
-                href="https://www.instagram.com/yashnile435?igsh=MWdqdWhscmFibmdjdg=="
-                target="_blank"
-                ><i class="fab fa-instagram"></i
-              ></a>
-              <a href="https://github.com/yashnile435" target="_blank"
-                ><i class="fab fa-github"></i
-              ></a>
-              <a
-                href="https://www.linkedin.com/in/yash-nile-3a54ba286?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-                target="_blank"
-                ><i class="fab fa-linkedin"></i
-              ></a>
-            </div>
-          </div>
         </div>
       </div>
     </section>
 
     <footer>
       <div class="container">
-        <p>&copy; 2025 Yash Nile. All Rights Reserved.</p>
+        <p>&copy; 2025 Yash Nile. Built with <i class="fas fa-heart"></i> and Code.</p>
       </div>
     </footer>
     <script src="script.js"></script>
